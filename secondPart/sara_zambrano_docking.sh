@@ -23,6 +23,14 @@ echo siguiente
 #compruebo que ficheros existen
 # [ $1 -f || ]
 
+ficheros=("$1" "$2" "$3")
+for fichero in "${ficheros[@]}"; do
+if [ ! -f "$ficheros" ]; then
+echo "Error: El fichero $ficheros no existe"
+exit 1
+fi
+done
 
+echo "Tots els fitxers existeixen"
 
 #comprobamos la extension de los ficheros
