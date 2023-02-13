@@ -1,0 +1,5 @@
+NOM: Sara
+COGNOM: Zambrano
+EDAT: 19
+EDAT: 8
+SEXE: Dona
