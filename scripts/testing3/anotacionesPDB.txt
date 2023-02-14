@@ -1,0 +1,13 @@
+cat archivo.pdb | grep ^TITLE | sed 's/^[[:blanck:]]*//g'
+cat archivo.pdb | grep ^TITLE | sed 's/^[[:blanck:]]*//g' | sed 's/^[0-9]/g' tr -d \n
+
+//proximo dia como sacar los autores del pdb:
+
+
+head -c 20 archivo.pdb 
+cat archivo.pdb | grep ^AUTHOR' sed 's/^AUTHOR//g' sed 's/^[[:blank:]]*//g
+
+
+contar 
+
+cat archivo.pdb | grep ^AUTHOR' sed 's/^AUTHOR//g' sed 's/^[[:blank:]]*//g tr ',' wc -l

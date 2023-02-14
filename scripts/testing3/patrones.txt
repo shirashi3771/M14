@@ -1,0 +1,8 @@
+^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
+^34[[:space:]][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
+
+
+------comando de remplazar---
+
+echo esto es la palabra la la la la |tr ' ' '\n' | uniq -c
+echo esto es la palabra la la la la |tr ' ' '\n' | uniq -c | sort -rn
