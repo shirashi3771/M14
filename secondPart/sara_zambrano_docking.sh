@@ -63,7 +63,27 @@ ls -la $carpeta_docking
 ##Descomprimeix els fàrmacs a la carpeta de fàrmacs
 
 ##DESCOMPRIMIR FARMACS:
+# Descomprimimos los farmacos a la carpeta farmacos
+tar -zxvf $1 -C $carpeta_docking/farmacs/
 
-tar -zxvf $1 -C $carpeta_docking/farmacs
-echo descompresio:
-ls -la
+# Copiar la proteina a la carpeta proteina
+cp $2 $carpeta_docking/proteina
+
+#mostramos
+ls -la $carpeta_docking/proteina
+ls -la $carpeta_docking/farmacs
+
+#####EX4
+
+# Creamos la carpeta docking simulaciones
+mkdir $carpeta_docking/simulacions
+
+# Creando carpeta para cada par de fármacos y proteinas
+for farmac in $carpeta_docking/farmacs/*; do
+farmac_name="$(basename $farmac .mol)"
+proteina_name="$(basename $2 .pdb)"
+carpeta_simulacion="$carpeta_docking/simulacions/$proteina_name-$farmac_name"
+mkdir $carpeta_simulacion
+done
+
+echo "Se termino el script"
